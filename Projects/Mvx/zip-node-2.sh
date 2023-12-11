@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd /root/mx-works
 docker container stop squad-2
-screen -S zipper -d -m "7za u -up0q3r2x2y2z1w2 -mx=1 -mmt=on /data/vdd/vdd1/node-2.7z /root/MyObservingSquad/node-2/db/"
-./start-node-2.sh
+docker container prune --force
+
+screen -S squad-2 -d -m bash -c 'sleep 5;tar -czvf /data/float/node-2.tgz -C /data/MyObservingSquad/cbs-2/node-2 db ;./run-node-2.sh'
