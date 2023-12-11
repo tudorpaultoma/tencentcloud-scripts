@@ -1,6 +1,6 @@
 #!/bin/bash
 
-coscmd upload  /data/vdd/vdd1/node-0.7z /MX/ -v
-coscmd upload  /data/vdd/vdd1/node-1.7z /MX/ -v
-coscmd upload  /data/vdd/vdd1/node-2.7z /MX/ -v
-coscmd upload  /data/vdd/vdd1/node-3.7z /MX/ -v
+coscmd upload  --skipmd5 /data/float/node-0.tgz /MX/
+coscmd upload  --skipmd5 /data/float/node-1.tgz /MX/
+coscmd upload  --skipmd5 /data/float/node-2.tgz /MX/
+coscmd upload  --skipmd5 /data/float/node-metachain.tgz /MX/
